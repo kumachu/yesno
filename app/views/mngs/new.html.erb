@@ -1,0 +1,11 @@
+<% provide(:title, 'Create') %>
+<div class="container theme-showcase" role="main">
+  <div class="jumbotron">
+    <h3>質問を登録する</h3>
+    <p>「はい。」か「いいえ。」で答えられる質問にしてください。</p>
+	<%= form_for(@mng) do |f| %>
+      <%= f.text_area :question, :class=>"form-control question" %>
+      <%= f.submit "登録", :class=>"btn btn-default" %>
+	<% end %>
+  </div>
+</div>

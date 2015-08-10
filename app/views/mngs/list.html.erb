@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<table class="table">
+  <tr>
+  	<th>id</th><th>質問</th><th>処理</th>
+  </tr>
+  <% @mngs.each do |mng| %>
+    <tr>
+      <td><%= link_to (mng.id), mng %></td>
+	  <td><%= link_to (mng.question), mng %></td>
+	  <td><%= link_to 'Delete', mng_path(mng), :method => :delete, data: { confirm: mng.id.to_s() + "の質問を削除しますか？" } %></td>
+	</tr>
+  <% end %>
+</table>

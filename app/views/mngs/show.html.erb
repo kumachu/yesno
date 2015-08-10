@@ -1,0 +1,10 @@
+<% provide(:title, 'Create') %>
+
+<div class="container theme-showcase" role="main">
+  <div class="jumbotron">
+  	<p id="notice"><%= notice %></p>
+  	<h3>質問</h3>
+	<p><%= simple_format(@mng.question) %></p>
+	<p>YES:<%= @mng.yes %>  NO:<%= @mng.no %></p>
+  </div>
+</div>

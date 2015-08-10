@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get '/list', to: 'mngs#list'
+  get '/', to: 'mngs#index'
+
+  resources :mngs
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

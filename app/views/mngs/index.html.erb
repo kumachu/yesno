@@ -1,0 +1,22 @@
+<% provide(:title, 'TOP') %>
+<div class="container theme-showcase" role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <h1>Yes or No</h1>
+    <p>意見はいらない。「はい。」か「いいえ。」で答えて欲しい。</p>
+    <p id="notice"><%= notice %></p>
+    <% if @mng != nil %>
+      <p><%= simple_format(@mng.question) %></p>
+      <%= form_for(@mng) do |f| %>
+        <%= radio_button_tag(:result, "1", :checked=>true) %>Yes
+        <%= radio_button_tag(:result, "0") %>No
+        <%= f.submit "回答する", :class=>"btn btn-default" %>
+      <% end %>
+    <% end %>
+    <br>
+    <a class="btn btn-default" href="/mngs/new">質問を登録する</a>
+  </div>
+</div>
+
+
